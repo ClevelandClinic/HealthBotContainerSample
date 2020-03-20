@@ -80,20 +80,26 @@ function initBotConversation() {
     */
 
     // Use the following activity to proactively invoke a bot scenario. 
-    /*
+
+    /*****************************************************************/
+    /* Local Cleveland Clinic changes to the original Microsoft code */
+    checkMobile();
     botConnection.postActivity({
         type: "invoke",
         value: {
-            trigger: "{scenario}",
-            args: {
-                myVar1: "{custom_arg_1}",
-                myVar2: "{custom_arg_2}"
-            }
+            trigger: "covid19_assessment"
         },
         from: user,
         name: "TriggerScenario"
     }).subscribe(function(id) {});
-    */
+    
+    //supresses the text entry portion of the chat bot
+    var shellInput = document.querySelector(".wc-console.has-upload-button");
+    shellInput.parentNode.removeChild(shellInput);
+    /* /Local changes                                                */
+    /*****************************************************************/
+	
+	
 
     botConnection.activity$
         .filter(function (activity) {return activity.type === "event" && activity.name === "shareLocation"})
@@ -112,3 +118,13 @@ function startChat(user, botConnection) {
         // sendTyping: true,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
     }, botContainer);
 }
+
+function checkMobile() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.getElementsByTagName( 'html' )[0].className = "mobile";
+    }
+    else {
+        document.getElementsByTagName( 'html' )[0].className = "not-mobile";
+    }
+}
+// a change.

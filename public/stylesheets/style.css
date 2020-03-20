@@ -30,5 +30,69 @@ html, body {
 }
 
 .ac-input div input[type="checkbox"]:checked + div{
-  color: #0177ca!important
+  color: #5177ca!important
+}
+
+.mobile {
+  font-size: 225%;
+}
+
+.mobile button {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+.mobile .wc-header {
+  height: auto;
+  padding: 0.5rem;
+}
+
+.mobile .wc-card {
+  border: none;
+}
+
+.mobile .ac-container {
+  background-color: #eceff1 !important;
+}
+
+.mobile .ac-container .ac-container {
+  background-color: white !important;
+}
+
+.mobile .ac-container div div div {
+  background-color: white;
+}
+
+.mobile .ac-container:focus {
+  outline: none;
+}
+
+.mobile .wc-adaptive-card {
+  width: 100%;
+}
+
+.mobile .wc-message-content {
+  padding: 0.5rem;
+}
+
+.mobile body .wc-app {
+  font-size: 1rem;
+}
+
+.mobile .wc-message-from {
+  font-size: 0.85rem;
+}
+
+.mobile .wc-message-groups {
+  bottom: 0;
+}
+
+.mobile button + div {
+  height: 0.5rem !important;
+  background-color: #eceff1 !important;
+}
+
+.mobile ul li,.mobile ol li {
+  margin-bottom: 0.25rem;
 }
