@@ -127,4 +127,3 @@ function checkMobile() {
         document.getElementsByTagName( 'html' )[0].className = "not-mobile";
     }
 }
-// a change.
