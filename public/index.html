@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8" />
+    <title>Health Bot</title>
     <script src="https://cdn.botframework.com/botframework-webchat/master/webchat-es5.js"></script>
     <script src="index.js"></script>
     <link href="stylesheets/style.css" rel="stylesheet" />
+     <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), 
+                event: 'gtm.js'
+            }); 
+            var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), 
+            dl = l != 'dataLayer' ? '&l=' + l : ''; 
+            j.async = true; 
+            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; 
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-3M4W');
+    </script>
+    <!-- /=End Google Tag Manager -->
 </head>
 <body>
-<div id="webchat" role="main"></div>
-<script>requestChatBot();</script>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe sandbox security="restricted" src="//www.googletagmanager.com/ns.html?id=GTM-3M4W"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>        
+    <!-- /=End Google Tag Manager -->
+	<div id="webchat" role="main"></div>
+	<script>requestChatBot();</script>
 </body>
 </html>
