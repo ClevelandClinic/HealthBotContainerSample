@@ -11,7 +11,7 @@ body {
   padding-left: 10px;
 }
 
-#botContainer {
+#webchat {
   float: right;
   height: 99%;
   width: 460px;
@@ -21,7 +21,7 @@ body {
   border-style: inset;
 }
 
-#botContainer.wc-display {
+#webchat.wc-display {
   display: block;
 }
 
