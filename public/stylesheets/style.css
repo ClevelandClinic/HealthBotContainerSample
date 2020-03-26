@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
 }
+
 body {
   margin: 0;
 }
@@ -8,7 +9,6 @@ body {
 #webchat {
   height: 100%;
   width: 100%;
-  padding-left: 10px;
 }
 
 #webchat {
