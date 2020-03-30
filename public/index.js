@@ -96,14 +96,7 @@ function startChat(user, botConnection) {
         botConnection: botConnection,
         user: user,
         locale: 'en',
-        resize: 'detect',
-        styleOptions: {
-        // botAvatarImage: 'https://docs.microsoft.com/en-us/azure/bot-service/v4sdk/media/logo_bot.svg?view=azure-bot-service-4.0',
-        // botAvatarInitials: '',
-        // userAvatarImage: '',
-        // userAvatarInitials: 'You',
-		hideSendBox: true            
-        }
+        resize: 'detect'
         // sendTyping: true,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
     }, botContainer);
 
