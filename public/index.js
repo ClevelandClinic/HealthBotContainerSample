@@ -67,39 +67,21 @@ function initBotConversation() {
     }
     const botConnection = new BotChat.DirectLine({
         token: tokenPayload.connectorToken,
-        domain,
+        domain: domain,
         webSocket: true
     });
+	checkMobile();
     startChat(user, botConnection);
 
-    // Use the following activity to enable an authenticated end user experience.
-    /*
-    botConnection.postActivity(
-        {type: "event", value: jsonWebToken, from: user, name: "InitAuthenticatedConversation"
-    }).subscribe(function (id) {});
-    */
-
-    // Use the following activity to proactively invoke a bot scenario. 
-
-    /*****************************************************************/
-    /* Local Cleveland Clinic changes to the original Microsoft code */
-    checkMobile();
     botConnection.postActivity({
         type: "invoke",
         value: {
-            trigger: "covid19_assessment"
+            trigger: "covid19_assessment",
+            args: {}
         },
         from: user,
         name: "TriggerScenario"
     }).subscribe(function(id) {});
-    
-    //supresses the text entry portion of the chat bot
-    var shellInput = document.querySelector(".wc-console.has-upload-button");
-    shellInput.parentNode.removeChild(shellInput);
-    /* /Local changes                                                */
-    /*****************************************************************/
-	
-	
 
     botConnection.activity$
         .filter(function (activity) {return activity.type === "event" && activity.name === "shareLocation"})
@@ -117,6 +99,11 @@ function startChat(user, botConnection) {
         resize: 'detect'
         // sendTyping: true,    // defaults to false. set to true to send 'typing' activities to bot (and other users) when user is typing
     }, botContainer);
+
+    //supresses the text entry portion of the chat bot
+    var shellInput = document.querySelector(".wc-console.has-upload-button");
+    shellInput.parentNode.removeChild(shellInput);
+
 }
 
 function checkMobile() {

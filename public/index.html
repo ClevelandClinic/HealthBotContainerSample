@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Health Bot</title>
+    <title>COVID-19 Risk Screening Tool</title>
     <link href="https://hbs.azureedge.net/public-websites/webchat/botchat.css" rel="stylesheet" />
     <link href="stylesheets/style.css?v=5" rel="stylesheet" />
+    <script src="scripts/polyfills.js"></script>
     <script src="https://hbs.azureedge.net/public-websites/webchat/botchat.js"></script>
     <script src="index.js?v=5"></script>
-     <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -31,7 +32,7 @@
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
     </noscript>        
     <!-- /=End Google Tag Manager -->
-<div id="botContainer" style="width:100%"></div>
-<script>chatRequested();</script>
+    <div id="botContainer" style="width:100%"></div>
+    <script>chatRequested();</script>
 </body>
 </html>
