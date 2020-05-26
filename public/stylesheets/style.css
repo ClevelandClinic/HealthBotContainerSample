@@ -30,7 +30,8 @@ html, body {
 }
 
 .ac-input div input[type="checkbox"]:checked + div{
-  color: #5177ca!important
+  color: #363636 !important;
+  font-weight: 700 !important;
 }
 
 .ac-multichoiceInput {
